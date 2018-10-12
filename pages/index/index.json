@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "掘金",
+  "enablePullDownRefresh": true,
+  "usingCOmponents": {
+    "homepostItem": "/components/homepostItem/homepostItem"
+  }
+}

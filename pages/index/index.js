@@ -1,4 +1,8 @@
 // pages/index/index.js
+
+const config = getApp().globalData.config
+
+
 Page({
 
   /**
@@ -6,6 +10,30 @@ Page({
    */
   data: {
 
+  },
+
+
+  // 数据请求部分
+  getTimeline () {
+    wx.request({
+      url: `${config.timelineRequestUrl}/get_entry_by_timeline`,
+      data: {
+        src: 'web',
+        uid: '',
+        device_id: '',
+        token: '',
+        limit: 10,
+        category: 'all',
+        recomment: 1,
+        before: ''
+      },
+      success: (res) => {
+        console.log(res)
+      },
+      fail: (res) => {
+        console.log(res)
+      }
+    })
   },
 
   /**
@@ -26,7 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getTimeline()
   },
 
   /**
