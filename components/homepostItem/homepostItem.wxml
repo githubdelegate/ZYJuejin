@@ -6,7 +6,7 @@
       <image mode='aspectFill' src='{{item.user.avatarLarge || "/img/default_avatar.png"}}'></image>
       <view>{{item.user.username}}</view>
     </view>
-    <text class='type'>{{}}</text>
+    <text class='type'>xxxx</text>
   </view>
   <view class='content'></view>
   <view class='footer'></view>

@@ -2,19 +2,19 @@
 
 const config = getApp().globalData.config
 
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    timeline: [],
   },
 
 
   // 数据请求部分
-  getTimeline () {
+  // 获取首页数据
+  getTimeline (reload) {
     wx.request({
       url: `${config.timelineRequestUrl}/get_entry_by_timeline`,
       data: {
@@ -28,10 +28,28 @@ Page({
         before: ''
       },
       success: (res) => {
-        console.log(res)
+        // console.log(res)
+        let data = res.data
+        if ( data.s === 1) {
+          wx.hideLoading()
+          let list = (data.d && data.d.entrylist) || []
+          this.setData({
+             timeline: reload ? list : this.data.timeline.concat(list)
+          })
+        }else{
+          wx.showToast({
+            title: data.m.toString(),
+          })
+        }
       },
       fail: (res) => {
         console.log(res)
+        wx.showToast({
+          title: '网络开小差,请稍后重试',
+        })
+      },
+      complete: () => {
+        wx.stopPullDownRefresh()
       }
     })
   },
