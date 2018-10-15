@@ -1,6 +1,6 @@
 <wxs src="../../filter/filter.wxs" module="filters" />
 
-<view class='item' wx:for='{{list}}' wx:key='{{index}}'>
+<view class='item' wx:for='{{list}}' wx:key='{{index}}' data-item='{{item}}' catchtap='toPostDetail'>
   <view class='header'>
     <view class='name'>
       <image mode='aspectFill' src='{{item.user.avatarLarge || "/img/default_avatar.png"}}'></image>

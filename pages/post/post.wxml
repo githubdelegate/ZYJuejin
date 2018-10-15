@@ -1,0 +1,9 @@
+<!--pages/post/post.wxml-->
+<wxs module='filters' src='../../filter/filter.wxs' />
+<import src='../../lib/wxParse.wxml'/> 
+<view class='container'>
+  <image wx:if='{{postInfo.screenshot}}'></image>
+  <view class='content'>
+    <template  is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>
