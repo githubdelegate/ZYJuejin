@@ -1,13 +1,28 @@
-<!--homeposItem.wxml-->
-<!-- <text>homeposItem.wxml</text> -->
+<wxs src="../../filter/filter.wxs" module="filters" />
+
 <view class='item' wx:for='{{list}}' wx:key='{{index}}'>
   <view class='header'>
     <view class='name'>
       <image mode='aspectFill' src='{{item.user.avatarLarge || "/img/default_avatar.png"}}'></image>
       <view>{{item.user.username}}</view>
     </view>
-    <text class='type'>xxxx</text>
+    <text class='type'>{{filters.join(item.tags, 'title', '/')}}</text>
   </view>
-  <view class='content'></view>
-  <view class='footer'></view>
+  <view class='content'>
+    <view class='text'>
+      <text class='title'>{{item.title}}</text>
+      <view class='desc'>{{item.content}}</view>
+    </view>
+    <image src='{{item.screenshot}}' mode='aspectFill' class='img' wx:if='{{item.screenshot}}'></image>
+  </view>
+  <view class='footer'>
+    <view class='label'>
+      <image src='/img/ic_dynamic_collect.png'></image>
+      <text>{{item.commentsCount || '喜欢'}}</text>
+    </view>
+    <view class='label'>
+      <image src='/img/ic_dynamic_comment.png'></image>
+      <text>{{item.commentsCount || '评论'}}</text>
+    </view>
+  </view>
 </view>

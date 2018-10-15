@@ -1,0 +1,10 @@
+var join = function (arr, item, separator) {
+  arr = arr || [];
+  return arr.slice(0,2).map(function(i, index) {
+    return i[item];
+  }).join(separator);
+};
+
+module.exports = {
+  join: join,
+};
