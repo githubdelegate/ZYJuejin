@@ -8,6 +8,13 @@ var GetUrlRelativePath = function (url) {
   return relUrl;
 }
 
+var isEmptyObj = (obj) => {
+  for (let i in obj) {
+    return false
+  }
+  return true
+}
+
 // 获取 post id
 // https://juejin.im/post/5b39bbcc5188252ce018c745
 // 5b39bbcc5188252ce018c745 为 post id
@@ -31,4 +38,5 @@ let toPostDetail = (e) => {
 
 module.exports = {
   toPostDetail,
+  isEmptyObj
 }

@@ -1,6 +1,7 @@
 // pages/index/index.js
 
 const config = getApp().globalData.config
+const utils = require('../../util/util')
 
 Page({
 
@@ -15,6 +16,12 @@ Page({
   // 数据请求部分
   // 获取首页数据
   getTimeline (reload) {
+    let randIndex = ''
+    if (utils.isEmptyObj(this.data.timeline)) {
+      randIndex = ''
+    }else{
+      randIndex =  (this.data.timeline.slice(-1)[0].verifyCreatedAt) || ''
+    }
     wx.request({
       url: `${config.timelineRequestUrl}/get_entry_by_timeline`,
       data: {
@@ -25,7 +32,7 @@ Page({
         limit: 10,
         category: 'all',
         recomment: 1,
-        before: ''
+        before: randIndex
       },
       success: (res) => {
         // console.log(res)
@@ -57,7 +64,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getTimeline()
+    if (utils.isEmptyObj(this.data.timeline)) {
+      wx.startPullDownRefresh()
+    }
   },
 
   /**
@@ -70,11 +79,14 @@ Page({
     this.getTimeline()
   },
 
-  /**
+   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    wx.showLoading({
+      title: '加载...',
+    })
+    this.getTimeline(false)
   },
 
   /**

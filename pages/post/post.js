@@ -23,6 +23,8 @@ Page({
       this.getEntryByIds(id)
     }
   },
+
+
   toPersonal() {
     wx.navigateTo({
       url: `/pages/personal/personal?thirduid=${this.data.postInfo.user.objectId}`,

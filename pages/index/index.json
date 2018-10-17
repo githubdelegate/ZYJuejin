@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "掘金",
   "enablePullDownRefresh": true,
+  "onReachBottomDistance": 40,
   "usingComponents": {
     "homepostItem": "/components/homepostItem/homepostItem"
   }
