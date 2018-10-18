@@ -1,16 +1,24 @@
 <!--pages/hot/hot.wxml-->
 <!-- <text>pages/hot/hot.wxml</text> -->
-<view class="container" hover-class="none" hover-stop-propagation="false">
-  <view class="recommendList" hover-class="none" hover-stop-propagation="false">
-    <swiper class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" 
-      current="0" current-item-id="" interval="5000" duration="1000" wx:if="{{}}" next-margin='100rpx'>
-      <block wx:for="{{items}}" wx:key="{{index}}">
-        <swiper-item class="" item-id="">
-          <view class="item" hover-class="none" hover-stop-propagation="false">
-            <view class="title" wx:if="{{}}">
-              <image class="icon" src="/img/ic_topic_star.png">
-                
-              </image>
+<view class="container">
+  <view class="recommendList">
+    <swiper wx:if="{{recommendList.length}}" next-margin='100rpx'>
+      <block wx:for="{{recommendList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="item">
+            <view class="title" wx:if="{{item.isRecommend}}">
+              <image class="icon" src="/img/ic_topic_star.png"></image>
+              <text>编辑推荐</text>
+            </view>
+            <view class="title" wx:else>
+              <image class="icon" src="/img/pin_hot.png" />
+              <text>热门沸点</text>
+            </view>
+            <view class="content">
+              <view class="text">{{item.content}}</view>
+              <view class="img" wx:if="{{}}">
+                <image mode="aspectFill" src="{{item.pictures[0]}}" />
+              </view>
             </view>
           </view>
         </swiper-item>
