@@ -1,4 +1,4 @@
-// pages/launch/launch.js
+// pages/hot/hot.js
 Page({
 
   /**
@@ -12,16 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let timer = setTimeout(() => {
-      clearTimeout(timer)
-      this.direct()
-    }, 2000)
-  },
 
-  direct () {
-    wx.redirectTo({
-      url: '/pages/index/index',
-    })
   },
 
   /**

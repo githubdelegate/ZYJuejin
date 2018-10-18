@@ -4,14 +4,12 @@ const config = getApp().globalData.config
 const utils = require('../../util/util')
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     timeline: [],
   },
-
 
   // 数据请求部分
   // 获取首页数据

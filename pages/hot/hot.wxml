@@ -1,0 +1,20 @@
+<!--pages/hot/hot.wxml-->
+<!-- <text>pages/hot/hot.wxml</text> -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+  <view class="recommendList" hover-class="none" hover-stop-propagation="false">
+    <swiper class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" 
+      current="0" current-item-id="" interval="5000" duration="1000" wx:if="{{}}" next-margin='100rpx'>
+      <block wx:for="{{items}}" wx:key="{{index}}">
+        <swiper-item class="" item-id="">
+          <view class="item" hover-class="none" hover-stop-propagation="false">
+            <view class="title" wx:if="{{}}">
+              <image class="icon" src="/img/ic_topic_star.png">
+                
+              </image>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
