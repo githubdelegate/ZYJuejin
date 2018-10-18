@@ -19,8 +19,12 @@ Page({
   },
 
   direct () {
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/index/index',
+      success: (result)=>{
+      },
+      fail: ()=>{},
+      complete: ()=>{}
     })
   },
 
