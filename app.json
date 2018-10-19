@@ -7,45 +7,33 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#3281ff",
-    "navigationBarTitleText": "掘金",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "摸会鱼",
     "navigationBarTextStyle": "light"
   },
   "tabBar": {
     "color": "#abb4bf",
-    "selectedColor": "#3281ff",
+    "selectedColor": "#1296db",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "主页",
-        "iconPath": "img/tab_home_normal.png",
-        "selectedIconPath": "img/tab_home.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "搜索",
-        "iconPath": "img/tab_explore_normal.png",
-        "selectedIconPath": "img/tab_explore.png"
+        "iconPath": "img/tabbar/home.png",
+        "selectedIconPath": "img/tabbar/home_sel.png"
       },
       {
         "pagePath": "pages/hot/hot",
-        "text": "沸点",
-        "iconPath": "img/tab_feidian_normal.png",
-        "selectedIconPath": "img/tab_feidian.png"
+        "text": "热点",
+        "iconPath": "img/tabbar/hot.png",
+        "selectedIconPath": "img/tabbar/hot_sel.png"
       },
       {
         "pagePath": "pages/index/index",
         "text": "小册",
-        "iconPath": "img/tab_xiaoce_normal.png",
-        "selectedIconPath": "img/tab_xiaoce.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "我的",
-        "iconPath": "img/tab_profile_normal.png",
-        "selectedIconPath": "img/tab_profile.png"
+        "iconPath": "img/tabbar/book.png",
+        "selectedIconPath": "img/tabbar/book_sel.png"
       }
     ]
   }

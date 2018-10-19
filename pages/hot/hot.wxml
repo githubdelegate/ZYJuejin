@@ -25,4 +25,7 @@
       </block>
     </swiper>
   </view>
+  <view class="pinList">
+    
+  </view>
 </view>

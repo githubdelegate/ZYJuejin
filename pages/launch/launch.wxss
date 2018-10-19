@@ -39,7 +39,7 @@
 
 .top image {
   width: 200rpx;
-  /* margin-bottom: 40rpx; */
+  margin-bottom: 40rpx;
 }
 
 .bottom {

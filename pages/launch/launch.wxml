@@ -4,11 +4,11 @@
   <image mode='widthFix' class='bcg' src='/img/launch_bcg.png'></image>
   <view class='top'>
     <view class='wrapper'>
-      <image mode='widthFix' src='/img/launch_diamond.png'></image>
-      <view>相信科技的力量</view>
+      <image mode='widthFix' src='/img/launch_fish.png'></image>
+      <view>工作累了摸会鱼</view>
     </view>
   </view>
   <view class='bottom'>
-    <image mode='widthFix' src='/img/launch_bottom.png'></image>
+    <image mode='widthFix' src=''></image>
   </view>
 </view>
