@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    item: {
+      type: Object,
+      value: {}
+    }
   },
 
   /**
@@ -19,5 +22,9 @@ Component({
    */
   methods: {
 
+  },
+
+  attached: function () {
+    console.log('top feidian', this.properties.item)
   }
 })

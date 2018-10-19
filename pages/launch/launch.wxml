@@ -5,7 +5,7 @@
   <view class='top'>
     <view class='wrapper'>
       <image mode='widthFix' src='/img/launch_fish.png'></image>
-      <view>工作累了摸会鱼</view>
+      <view>累了摸会鱼</view>
     </view>
   </view>
   <view class='bottom'>

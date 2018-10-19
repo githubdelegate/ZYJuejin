@@ -1,2 +1,5 @@
 <!--components/feidianItem/feidianItem.wxml-->
-<text>components/feidianItem/feidianItem.wxml</text>
+<view class="item">
+  <feidiantop item='{{item}}'></feidiantop>
+  <feidianbottom item='{{item}}'></feidianbottom>
+</view>

@@ -1,2 +1,13 @@
 <!--components/feidiantop/feidiantop.wxml-->
-<text>components/feidiantop/feidiantop.wxml</text>
+<view class="top">
+  <!-- 用户信息 -->
+  <view class="header">
+    <image src="{{item.user.avatarLarge}}" />
+    <view class="title">
+      <text>{{item.user.username}}</text>
+      <text>{{item.user.jobTitle}}</text>
+    </view>
+  </view>
+   <!-- 内容区域 -->
+  <view class="content"></view>
+</view>

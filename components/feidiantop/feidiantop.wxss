@@ -1,1 +1,21 @@
 /* components/feidiantop/feidiantop.wxss */
+.top {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 80rpx;
+}
+
+.header image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.title {
+
+}
