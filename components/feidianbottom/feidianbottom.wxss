@@ -1,1 +1,25 @@
 /* components/feidianbottom/feidianbottom.wxss */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #efefef;
+  color: #999;
+  font-size: 28rpx;
+  /* padding: 20rpx 30rpx; */
+  height: 80rpx;
+}
+
+
+.footer .i {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}

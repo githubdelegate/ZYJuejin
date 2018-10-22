@@ -1,2 +1,15 @@
 <!--components/feidianbottom/feidianbottom.wxml-->
-<text>components/feidianbottom/feidianbottom.wxml</text>
+<view class="footer">
+  <view class="i">
+    <image wx:if="{{item.isLiked}}" src="/img/zan_green_feidian3.png" />
+    <image wx:if="{{!item.isLiked}}" src="/img/zan_grey_feidian3.png" />
+    <text>{{item.likedCount || '赞'}}</text>
+  </view>
+  <view class="i">
+    <image src="/img/fd_reply.png"/>
+    <text>{{item.commentCount || '评论'}}</text>
+  </view>
+  <view class="i">
+    <image src="/img/fd_share.png" />
+  </view>
+</view>
