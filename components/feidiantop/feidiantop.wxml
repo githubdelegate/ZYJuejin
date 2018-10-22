@@ -5,9 +5,13 @@
     <image src="{{item.user.avatarLarge}}" />
     <view class="title">
       <text>{{item.user.username}}</text>
-      <text>{{item.user.jobTitle}}</text>
+      <view class="job">
+        <text wx:if="{{item.user.jobTitle}}">{{item.user.jobTitle}}</text>
+        <text wx:if="{{item.user.jobTitle && item.user.company}}">@ {{item.user.company}}</text>
+        <text>{{item.createdAt}}</text>
+      </view>
     </view>
   </view>
    <!-- 内容区域 -->
-  <view class="content"></view>
+  <text decode="{{true}}" class='content {{intro ? "intro" : ""}}' data-id="{{item.objectId}}" catchtap="toFeidianDetail">{{item.content}}</text>
 </view>

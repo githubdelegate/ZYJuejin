@@ -2,7 +2,7 @@
 <!-- <text>pages/hot/hot.wxml</text> -->
 <view class="container">
   <view class="recommendList">
-    <swiper wx:if="{{recommendList.length}}" next-margin='100rpx'>
+    <swiper wx:if="{{recommendList.length}}" next-margin='100rpx' style="height:{{swiperHeight}}">
       <block wx:for="{{recommendList}}" wx:key="{{index}}">
         <swiper-item>
           <view class="item">
