@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "沸点",
+  "navigationBarTitleText": "热点",
   "enablePullDownRefresh": true,
   "usingComponents": {
     "feidianItem": "/components/feidianItem/feidianItem"

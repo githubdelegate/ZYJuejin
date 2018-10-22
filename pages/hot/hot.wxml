@@ -1,7 +1,7 @@
 <!--pages/hot/hot.wxml-->
 <!-- <text>pages/hot/hot.wxml</text> -->
 <view class="container">
-  <view class="recommendList">
+  <!-- <view class="recommendList">
     <swiper wx:if="{{recommendList.length}}" next-margin='100rpx' style="height:{{swiperHeight}}">
       <block wx:for="{{recommendList}}" wx:key="{{index}}">
         <swiper-item>
@@ -24,7 +24,7 @@
         </swiper-item>
       </block>
     </swiper>
-  </view>
+  </view> -->
   <view class="pinList">
     <feidianItem item='{{item}}' wx:for='{{list}}' wx:key='{{index}}'></feidianItem>
   </view>

@@ -1,4 +1,5 @@
 <!--components/feidiantop/feidiantop.wxml-->
+<wxs module="filters" src="../../filter/filter.wxs"></wxs>
 <view class="top">
   <!-- 用户信息 -->
   <view class="header">
@@ -8,7 +9,8 @@
       <view class="job">
         <text wx:if="{{item.user.jobTitle}}">{{item.user.jobTitle}}</text>
         <text wx:if="{{item.user.jobTitle && item.user.company}}">@ {{item.user.company}}</text>
-        <text>{{item.createdAt}}</text>
+        <text wx:if="{{item.user.jobTitle}}">~</text>
+        <text>{{filters.timeBefore(item.createdAt)}}</text>
       </view>
     </view>
   </view>
@@ -17,7 +19,7 @@
   <view class="topic" wx:if="{{item.urlTitle || item.url}}">
     <view class="desc">
       <text>{{item.urlTitle}}</text>
-      <text class="url">{{item.url}}</text>
+      <text class="url">{{filters.getHostName(item.url)}}</text>
     </view>
     <image wx:if="{{item.urlPic}}" src="{{item.urlPic}}" />
   </view>

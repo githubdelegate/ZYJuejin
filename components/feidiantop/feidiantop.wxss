@@ -36,12 +36,12 @@
   word-break: break-all;
 }
 
-.content.intro {
-  display: -webkit-box;
+/* .content.intro { */
+  /* display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  overflow: hidden;
-}
+  overflow: hidden; */
+/* } */
 
 .pictures {
   padding: 0 30rpx 30rpx;
@@ -72,7 +72,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 100rpx; */
   padding-right: 30rpx;
   flex-shrink: 1;
 }
@@ -89,7 +88,6 @@
 }
 .tag {
   font-size: 22rpx;
-  /* display: inline-block; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
