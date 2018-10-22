@@ -25,7 +25,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 点击图片预览
+    previewImage: function (e) {
+      let dataset = (e.currentTarget || {}).dataset || {}
+      let pics = dataset.pics || []
+      let src = dataset.src
+      if (pics.length) {
+        wx.previewImage({
+          current: src,
+          urls: pics,
+        });
+      }
+    }
   },
 
   attached: function () {

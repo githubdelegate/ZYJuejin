@@ -26,6 +26,6 @@
     </swiper>
   </view>
   <view class="pinList">
-    <feidianItem item='{{item}}' wx:for='{{recommendList}}' wx:key='{{index}}'></feidianItem>
+    <feidianItem item='{{item}}' wx:for='{{list}}' wx:key='{{index}}'></feidianItem>
   </view>
 </view>

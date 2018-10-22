@@ -14,4 +14,22 @@
   </view>
    <!-- 内容区域 -->
   <text decode="{{true}}" class='content {{intro ? "intro" : ""}}' data-id="{{item.objectId}}" catchtap="toFeidianDetail">{{item.content}}</text>
+  <view class="topic" wx:if="{{item.urlTitle || item.url}}">
+    <view class="desc">
+      <text>{{item.urlTitle}}</text>
+      <text class="url">{{item.url}}</text>
+    </view>
+    <image wx:if="{{item.urlPic}}" src="{{item.urlPic}}" />
+  </view>
+  <view class="pictures" wx:if="{{item.pictures && item.pictures.length}}">
+    <view class="picture" style="width:33.33%;"  wx:key="{{index}}" wx:for="{{item.pictures}}" wx:if="{{item.pictures.length >= 2}}" wx:for-item="i">
+      <image wx:key="{{index}}" style="height:228rpx;" data-pics="{{item.pictures}}" data-src="{{i}}" mode="aspectFill" src="{{i}}" catchtap="previewImage"/>
+    </view>
+    <view class="picture" style="width:80%;" wx:if="{{item.pictures.length === 1}}">
+      <image mode="widthFix" src="{{item.pictures[0]}}" data-pics="{{item.pictures}}" data-src="{{i}}" catchtap="previewImage"/>
+    </view>
+  </view>
+  <view class="tag" wx:if="{{item.topic && item.topic.title}}">
+    <text>{{item.topic.title}}</text>
+  </view>
 </view>
