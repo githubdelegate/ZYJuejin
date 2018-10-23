@@ -1,0 +1,16 @@
+<!--components/bookItem/bookItem.wxml-->
+<view class="list" wx:for="{{list}}" wx:key="index">
+  <image class="poster" src="{{item.img}}" />
+  <view class="info">
+    <text class="title">{{item.title}}</text>
+    <text class="author">{{item.userData && item.userData.username}}</text>
+    <view class="other">
+      <view>
+        <text class="isFinished" wx:if="{{!item.isFinished}}">预售 </text>
+        <text>{{item.lastSectionCount}}小节 {{item.buyCount}}人已购买</text>
+      </view>
+    </view>
+  </view>
+  <view class="price" wx:if="{{!item.timeLimitDiscountFirstDay}}">${{item.price}}</view>
+  <view class="price" wx:if="{{item.timeLimitDiscountFirstDay}}">惠${{item.price * item.timeLimitDiscountFirstDay.discountCount / 10}}</view>
+</view>

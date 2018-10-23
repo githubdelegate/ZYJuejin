@@ -3,7 +3,8 @@
     "pages/launch/launch",
     "pages/index/index",
     "pages/post/post",
-    "pages/hot/hot"
+    "pages/hot/hot",
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -30,7 +31,7 @@
         "selectedIconPath": "img/tabbar/hot_sel.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/book/book",
         "text": "小册",
         "iconPath": "img/tabbar/book.png",
         "selectedIconPath": "img/tabbar/book_sel.png"
