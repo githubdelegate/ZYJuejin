@@ -1,0 +1,39 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<!-- <text>pages/bookdetail/bookdetail.wxml</text> -->
+<import src="../../lib/wxParse/wxParse.wxml"></import>
+<view>
+  <!-- 作者信息 -->
+  <view class="author">
+      <image class='poster' src="{{author.img}}" mode="widthFix" />
+      <view class="content">
+        <view class="xiaoceTitle">{{author.title}}</view>
+        <view class="desc">{{author.desc}}</view>
+        <view class="user">
+          <image class="avatar" src="{{author.userData && author.userData.avatarLarge}}" mode='aspectFill'/>
+          <text class="name">{{author.userData && author.userData.username}}</text>
+        </view>
+      </view>
+  </view>
+  <!-- 当前购买信息 -->
+  <view class="buy">
+    <image src="/img/ic_xiaoce_bought.png" />
+    <view class="count">{{author.buyCount}}人已购买啦</view>
+  </view>
+  <view class="heading">小册内容</view>
+  <view class="sections">
+    <view class="section" wx:for="{{sections}}" wx:key="{{index}}" data-isfree="{{item.isFree}}" data-sections='{{item._id}}' catchtap='toProbation'>
+      <view class="num">{{index + 1}}</view>
+      <view class="info">
+        <view class="title">{{item.title}}</view>
+        <view class="others">阅读时长: {{item.cotentSize}} {{item.pv}}次学习</view>
+      </view>
+      <view class="action">
+        <view wx:if="{{item.isFree}}">试读</view>
+        <image class="lock" src="/img/ic_xiaoce_lock.png"  wx:if="{{!item.isFree}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="summary">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+  </view>
+</view>

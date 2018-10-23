@@ -1,0 +1,117 @@
+/* pages/bookdetail/bookdetail.wxss */
+@import '../../lib/wxParse/wxParse.wxss';
+.author {
+  display: flex;
+  padding: 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.author .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 262rpx;
+  flex-grow: 1;
+}
+
+.author .poster {
+  width: 280rpx;
+  margin-right: 20rpx;
+}
+.author .user {
+  display: flex;
+  align-items: center;
+}
+
+.author .desc {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.author .avatar {
+  width: 54rpx;
+  height: 54rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 0 30rpx;
+  color: #666;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #efefef;
+  height: 80rpx;
+}
+
+.buy image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.heading {
+  height: 70rpx;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.section {
+  padding: 20rpx 30rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section .num {
+  flex-basis: 60rpx;
+  flex-shrink: 0;
+}
+
+.section .title {
+  color: #333;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.section .oters {
+  color: #666;
+  font-size: 10rpx;
+}
+
+.section .action {
+  flex-shrink:  0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72rpx;
+  margin-left: auto;
+}
+
+.section .action view {
+  color: #f9a359;
+  font-size: 24rpx;
+  line-height: 1em;
+  border-radius: 6rpx;
+  border: 1rpx solid #f9a359;
+  padding: 6rpx 10rpx;
+}
+
+.section .action image {
+  width: 32rpx;
+  height: 38rpx;
+}
+
+.summary {
+  background: #fff;
+  padding: 0 30rpx 20rpx;
+  margin-top: 20rpx;
+}

@@ -24,6 +24,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    tobookdetail (e) {
+        let dataset = e.currentTarget.dataset
+        let id = dataset.id
+        wx.navigateTo({
+          url: `/pages/bookdetail/bookdetail?id=${id}`,
+          success: (result)=>{
+            
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+        });
+    }
   }
 })

@@ -1,5 +1,5 @@
 <!--components/bookItem/bookItem.wxml-->
-<view class="list" wx:for="{{list}}" wx:key="index">
+<view class="list" wx:for="{{list}}" wx:key="index" data-id='{{item._id}}' catchtap='tobookdetail'>
   <image class="poster" src="{{item.img}}" />
   <view class="info">
     <text class="title">{{item.title}}</text>
