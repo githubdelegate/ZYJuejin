@@ -1,0 +1,8 @@
+/* pages/probation/probation.wxss */
+@import '../../lib/wxParse/wxParse.wxss';
+.wrapper{
+  min-height: 100vh;
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}

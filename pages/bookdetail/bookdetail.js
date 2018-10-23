@@ -96,5 +96,23 @@ Page({
         });
       },
     });
+  },
+
+  // 跳转都小册预览页面
+  toProbation (e) {
+    let  dataset = e.currentTarget.dataset
+    let free = dataset.isfree
+    if (free) {
+      wx.navigateTo({
+        url: `/pages/probation/probation?id=${dataset.sectionid}&isFree=${dataset.isfree}`,
+      });
+    }else {
+      wx.showModal({
+        content: '请去掘金网购买',
+        showCancel: true,
+        cancelText: '取消',
+        cancelColor: '#000000',
+      });
+    }
   }
 })

@@ -5,7 +5,8 @@
     "pages/post/post",
     "pages/hot/hot",
     "pages/book/book",
-    "pages/bookdetail/bookdetail"
+    "pages/bookdetail/bookdetail",
+    "pages/probation/probation"
   ],
   "window": {
     "backgroundTextStyle": "dark",

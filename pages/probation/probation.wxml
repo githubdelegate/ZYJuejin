@@ -1,0 +1,7 @@
+<!--pages/probation/probation.wxml-->
+<!-- <text>pages/probation/probation.wxml</text> -->
+<import src="../../lib/wxParse/wxParse.wxml"></import>
+
+<view class="wrapper" wx:if="{{free}}">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+</view>

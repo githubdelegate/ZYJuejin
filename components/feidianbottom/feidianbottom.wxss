@@ -9,8 +9,7 @@
   font-size: 28rpx;
   /* padding: 20rpx 30rpx; */
   height: 80rpx;
-}
-
+} 
 
 .footer .i {
   display: flex;
