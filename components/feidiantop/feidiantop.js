@@ -36,10 +36,24 @@ Component({
           urls: pics,
         });
       }
+    },
+
+    topicTap: function (e) {
+      let dataset = e.currentTarget.dataset
+      let url = dataset.url
+      wx.setClipboardData({
+        data: url,
+        success: (result)=>{
+          wx.showToast({
+            title: '链接已复制,请用浏览器打开',
+            icon: 'none',
+            duration: 1500,
+          });
+        },
+      });
     }
   },
 
   attached: function () {
-    console.log('top feidian', this.properties.item)
   }
 })

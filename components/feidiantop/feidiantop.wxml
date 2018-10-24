@@ -16,7 +16,7 @@
   </view>
    <!-- 内容区域 -->
   <text decode="{{true}}" class='content {{intro ? "intro" : ""}}' data-id="{{item.objectId}}" catchtap="toFeidianDetail">{{item.content}}</text>
-  <view class="topic" wx:if="{{item.urlTitle || item.url}}">
+  <view class="topic" wx:if="{{item.urlTitle || item.url}}" data-url="{{item.url}}" catchtap='topicTap'>
     <view class="desc">
       <text>{{item.urlTitle}}</text>
       <text class="url">{{filters.getHostName(item.url)}}</text>

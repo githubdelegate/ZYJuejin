@@ -3,9 +3,9 @@
 	"packOptions": {
 		"ignore": []
 	},
-  "cloudfunctionRoot": "./cloudFunc/",
+	"cloudfunctionRoot": "cloudFunc/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
