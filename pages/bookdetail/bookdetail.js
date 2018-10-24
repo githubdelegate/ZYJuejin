@@ -109,7 +109,7 @@ Page({
     }else {
       wx.showModal({
         content: '请去掘金网购买',
-        showCancel: true,
+        showCancel: false,
         cancelText: '取消',
         cancelColor: '#000000',
       });

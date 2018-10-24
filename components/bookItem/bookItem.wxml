@@ -11,6 +11,6 @@
       </view>
     </view>
   </view>
-  <view class="price" wx:if="{{!item.timeLimitDiscountFirstDay}}">${{item.price}}</view>
-  <view class="price" wx:if="{{item.timeLimitDiscountFirstDay}}">惠${{item.price * item.timeLimitDiscountFirstDay.discountCount / 10}}</view>
+  <view class="price" wx:if="{{!item.timeLimitDiscountFirstDay}}">￥{{item.price}}</view>
+  <view class="price" wx:if="{{item.timeLimitDiscountFirstDay}}">惠￥{{item.price * item.timeLimitDiscountFirstDay.discountCount / 10}}</view>
 </view>
